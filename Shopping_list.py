@@ -3,7 +3,7 @@
 buying_list = []
 
 
-def add():
+def add(): #Function for adding stuff in listS
     stuff = "yes"
     while True:
         if stuff == "no" or stuff == "NO":
@@ -15,7 +15,7 @@ def add():
             stuff = input("Enter stuff: ")
             
 
-def remove():
+def remove(): # function for removing stuff from list 
     stuff = "yes"
     while True:
         if stuff == "no" or stuff == "No":
@@ -26,7 +26,7 @@ def remove():
             stuff = input("Enter what remove: ")
 
 
-def show():
+def show(): # for show list
     print("Items in list: ", end="")
     for item in buying_list:
         print(item, sep=",")
