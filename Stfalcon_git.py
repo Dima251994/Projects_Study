@@ -1,4 +1,4 @@
-my_list = [4,5,6,7,8,9,10,11,12]
+my_list = [4,5,6,7,8,9,10,11,12,     13   ,15,17,19,23,26,28,31,33,34,34]
 
 def find_index(work_list, number):
     min_index = 0
@@ -16,6 +16,20 @@ def find_index(work_list, number):
     print("Dont have this number")
             
 
+
+
+
+
+
+
+
+
+name = input("Enter name ")
+print(len(name))
+if name:
+    print(f"Hello {name}")
+else:
+    print("Hello world")
 
 
 
