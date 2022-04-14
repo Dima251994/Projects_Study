@@ -21,6 +21,9 @@ def find_index(work_list, number):
 
 
 
-print("New line")
+
+
+
+second_variable = 34
 
 
