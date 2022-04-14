@@ -20,7 +20,6 @@ def find_index(work_list, number):
 
 
 
-
-print("New line")
+first_variable = 25
 
 
