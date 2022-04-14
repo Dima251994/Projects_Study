@@ -25,3 +25,4 @@ first_variable = 25
 second_variable = 34
 
 
+variable_for_master = 33333
