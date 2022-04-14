@@ -22,4 +22,6 @@ def find_index(work_list, number):
 
 first_variable = 25
 
+second_variable = 34
+
 
