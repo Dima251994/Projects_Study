@@ -25,4 +25,8 @@ first_variable = 25
 second_variable = 34
 
 
+
 variable_for_new_feature = 55555
+
+variable_for_master = 33333
+
