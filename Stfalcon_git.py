@@ -34,3 +34,6 @@ def greet():
     return "Hello world"
 
 print(greet())
+
+def square(num_1,num_2):
+    return num_1 * num_2
