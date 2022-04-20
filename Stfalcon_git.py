@@ -20,3 +20,32 @@ def find_index(work_list, number):
 
 
 
+# with open("some_file.txt" ,mode="r", encoding="utf-8") as file:
+#     #file = open("some_file.txt",mode="r")
+#     # reading_line_1 = file.readline()
+#     # print(reading_line_1)
+#     # reading_line_2 = file.readline()
+#     # print(reading_line_2)
+#     for line in file:
+#         print(type(line))
+#         #read_one_line = file.readline()
+#         #print(read_one_line)
+    
+
+#     #file.close()
+
+
+
+class SomeValueError(Exception):
+    """Error value too large"""
+    #print("Value_Too_Large_Error")
+    pass
+
+number = 10
+try:
+  if number > 3:
+     raise SomeValueError
+except SomeValueError:
+     print("Value too big")  
+
+
