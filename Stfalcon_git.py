@@ -20,32 +20,45 @@ def find_index(work_list, number):
 
 
 
-# with open("some_file.txt" ,mode="r", encoding="utf-8") as file:
-#     #file = open("some_file.txt",mode="r")
-#     # reading_line_1 = file.readline()
-#     # print(reading_line_1)
-#     # reading_line_2 = file.readline()
-#     # print(reading_line_2)
-#     for line in file:
-#         print(type(line))
-#         #read_one_line = file.readline()
-#         #print(read_one_line)
+class Office():
+    workers = []
+    def __init__(self):
+        pass
+
+    def add_worker(self, employee):
+        self.workers.append(employee)
+
+    def get_worker(self, index):
+        if index < len(self.workers):
+            self.workers[index].show_info()
+        else:
+            print("Not found")
+
+
+
+class Employee():
+    count_of_employee = 0
+    def __init__(self, name, salary):
+        self.name_of_employee = name
+        self.salary_of_employee = salary
+        Employee.count_of_employee += 1
+        
     
+    def show_count(self):
+        print("Total employee:", Employee.count_of_employee)
+    
+    def show_info(self):
+        print(f"Name: {self.name_of_employee}, Salary: {self.salary_of_employee}")
 
-#     #file.close()
 
 
+office = Office()
+office.add_worker(Employee("Derek", 1300))
+office.add_worker(Employee("John", 1600))
+office.add_worker(Employee("Bob", 2300))
 
-class SomeValueError(Exception):
-    """Error value too large"""
-    #print("Value_Too_Large_Error")
-    pass
 
-number = 10
-try:
-  if number > 3:
-     raise SomeValueError
-except SomeValueError:
-     print("Value too big")  
+office.get_worker(2)
+
 
 
