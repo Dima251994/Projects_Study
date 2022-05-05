@@ -1,20 +1,23 @@
-list_of_sheeps = [True,  True,  True,  False,
-  True,  True,  True,  True ,
-  True,  False, True,  False,
-  True,  False, False, True ,
-  True,  True,  True,  True ,
-  False, False, True,  True]
-def count_sheeps(sheep):
-    counter = 0
-    for one_sheep in sheep:
-        if one_sheep == True:
-            counter += 1
-    return counter
+# def next_number(numbers):
+#     index = 1
+#     for iter in numbers:
+#         if len(numbers) > index and numbers[index] - numbers[index - 1] !=1:
+#             return numbers[index]
+#         index += 1
+#     return None
 
-print(count_sheeps(list_of_sheeps))
+
+# print(next_number([1,2,3,4,5]))
 
 
 
+import mysql.connector
 
+connection = mysql.connector.connect(
+    user = "root",
+    password = "9293709",
+    host = "127.0.0.1",
+    database = "work"
+    )
 
-
+connection.close()
