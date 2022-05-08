@@ -58,7 +58,7 @@ office.add_worker(Employee("John", 1600))
 office.add_worker(Employee("Bob", 2300))
 
 
-office.get_worker(2)
+office.get_worker(6)
 
 
 
