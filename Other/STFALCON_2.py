@@ -60,5 +60,13 @@ def delete_from_sql(my_cursor, my_connection):
 
 #get_data_my(cursor)
 #update_data(cursor, connection)
-delete_from_sql(cursor, connection)
+#delete_from_sql(cursor, connection)
 connection.close()
+
+
+
+def some_func():
+    return print("Hello")
+
+
+some_func()
