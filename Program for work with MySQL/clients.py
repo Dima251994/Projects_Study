@@ -27,6 +27,8 @@ def main():
             s.case("wr", lambda: writer_service.remove_writer()) # удалить поета
             s.case("?", show_menu) # показ меню 
             s.case("t", writer_service.get_writer_id)
+            s.case("wid", books_service.show_books_with_authors) # функция для показа книги и имя автора
+            s.case("oa", books_service.book_only_one_author)
             s.case("e", exit)    # выход из программы по умолчанию в python
             s.default(lambda: print("Sorry, enter command")) # это запуститься если ни один из вариантов не подойдет, должна быть только функция
 
@@ -39,6 +41,8 @@ def show_menu():
     print("[W]Writer list")
     print("[A]Add writer")
     print("[WR]Remove writer")
+    print("[WID] Show books with author name")
+    print("[OA] Only one author his books")
     print("[?] Help")
     print("[E] Exit")
 if __name__ == "__main__":

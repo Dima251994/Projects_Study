@@ -19,6 +19,21 @@ class BooksService():
         columns = ["id", "name", "description", "writer_id"] # названия колонок когда мы будем использовать функцию для красивого вывдедения таблицы
         PrettyPrint(books.TABLE_NAME, columns, info_from_cursor)
 
+    def show_books_with_authors(self): # функция которая показывает и книгу и имя автора
+        cursor = self.__connectionService.get_cursor()
+        cursor.execute(f""" SELECT
+                                {books.TABLE_NAME}.name,
+                                {books.TABLE_NAME}.description,
+                                {writers.TABLE_NAME}.name' 
+                            FROM {books.TABLE_NAME} 
+                            JOIN {writers.TABLE_NAME}
+                            ON writers.id = books.writer_id """)
+        info_from_cursor = cursor.fetchall()
+        
+        columns = ["Book name","Description","Author name"]
+        PrettyPrint("Author and books", columns, info_from_cursor)
+        #print(info_from_cursor)
+
 
     # def get_books_list_return(self):
     #     cursor = self.__connectionService.get_cursor()
@@ -52,5 +67,20 @@ class BooksService():
         print(info)
         #except:
          #   print("Dont have this book in list")
+
+    def book_only_one_author(self): # отображает книги только того автора которого мы пропишем имя
+        cursor = self.__connectionService.get_cursor()
+        author_name = input("Enter name for show author books: ") # вот тут пропишем имя
+        cursor.execute(f""" SELECT
+                                {books.TABLE_NAME}.name,
+                                {books.TABLE_NAME}.description,
+                                {writers.TABLE_NAME}.name 
+                            FROM {books.TABLE_NAME} 
+                            JOIN {writers.TABLE_NAME}
+                            ON writers.id = books.writer_id
+                            WHERE writers.name = '{author_name}' """)
+        info_from_cursor = cursor.fetchall()
+        columns = ["Book name","Description","Author name"]
+        PrettyPrint("Author and his books", columns, info_from_cursor)
 
 
