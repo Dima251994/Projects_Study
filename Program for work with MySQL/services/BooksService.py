@@ -81,6 +81,6 @@ class BooksService():
                             WHERE writers.name = '{author_name}' """)
         info_from_cursor = cursor.fetchall()
         columns = ["Book name","Description","Author name"]
-        PrettyPrint("Author and his books", columns, info_from_cursor)
+        PrettyPrint(author_name + " books", columns, info_from_cursor)
 
 
