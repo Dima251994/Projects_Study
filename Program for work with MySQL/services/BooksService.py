@@ -11,7 +11,7 @@ class BooksService():
         self.__connectionService = ConnectionService()
         self.__writerService = WriterService() # нужно инициализировать его как обьект класса, это такой переключатель на рахные классы
 
-    def get_books_list(self):
+    def get_books_list(self): # получить список книг в таблице
         cursor = self.__connectionService.get_cursor()
         cursor.execute(f""" SELECT * FROM {books.TABLE_NAME} """)
         info_from_cursor = cursor.fetchall()
@@ -40,7 +40,7 @@ class BooksService():
     #     cursor.execute(f""" SELECT * FROM {books.TABLE_NAME} """)
     #     return cursor.fetchall()
 
-    def add_book(self):
+    def add_book(self): # добавляет книгу
         cursor = self.__connectionService.get_cursor()
         
         name_of_books = input("ENter book name: ")
@@ -57,7 +57,7 @@ class BooksService():
         connection = ConnectionService.instance()
         connection.commit()
 
-    def show_book_info(self):
+    def show_book_info(self): # показывает только description
         cursor = self.__connectionService.get_cursor()
         name_of_book = input("Enter name of book: ")
         #try:

@@ -6,14 +6,11 @@ from services.BooksService import *
 from prettytable import PrettyTable # импорт бибилиотеки для красивой таблицы
 
 
-
 books_service = BooksService()
 writer_service = WriterService()
 
 def main():
     show_menu()
-
-    
 
     while True: # цикл чтобы всегда работало
         action = input(Fore.YELLOW + "Enter action for work: " + Fore.RESET).lower().strip() # в инпуте нужно плюсовать, так как принимает только один параметр

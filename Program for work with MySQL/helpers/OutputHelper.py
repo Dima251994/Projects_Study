@@ -1,7 +1,4 @@
-# Файл для нормального вывдения елементов из БД
-
-
-
+# Файл для нормального вывдения елементов из БД 
 
 from colorama import Fore 
 from prettytable import PrettyTable
@@ -18,9 +15,9 @@ def PrettyPrint(table_name, columns, rows):
 
 
 def show_id(sql_info):
-    for tuple_0 in sql_info: # для того чтобы показать номер из sql запроса
+    for tuple_0 in sql_info: # для того чтобы показать номер из sql запроса 
         for item in tuple_0:
-            return item
+            return item # возвращение елемента из первого столбца из списка по SQL запросу
 
 
 

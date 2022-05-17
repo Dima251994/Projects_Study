@@ -43,14 +43,15 @@ class WriterService():
         connection.commit()
 
 
-    def get_writer_id(self, name): # Эта функция получет id писателя по имени, которое будет прописано при вызове функции
+    def get_writer_id(self): # Эта функция получет id писателя по имени, которое будет прописано при вызове функции
         cursor = self.__connectionService.get_cursor()
+        author_name = input("Enter name of author: ")
 
-        cursor.execute(f""" SELECT * FROM {writers.TABLE_NAME} WHERE name = "{name}" """)
+        cursor.execute(f""" SELECT * FROM {writers.TABLE_NAME} WHERE name = "{author_name}" """)
         
 
         info_from_table = cursor.fetchmany(size=1)
         number_id = show_id(info_from_table) # сохраняем нормальный id номер
-        return number_id
+        print(number_id)
 
 
