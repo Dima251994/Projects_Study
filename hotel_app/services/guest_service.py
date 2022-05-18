@@ -24,6 +24,22 @@ class Guest_Service():
 
         print("Guest saved")
 
+    def search_guest(self):
+        name = input("Enter name for search guest: ")
+
+        guest = Guest.objects().filter(name=name) # получаем обьекты из БД и выбираем определенные по методу filter
+
+        if guest:
+            return guest[0]
+        # else:
+        #     print("Not found")
+
+
+        columns = ("Name", "Age") # колонки для названия в PrettyTable
+        pretty_print(guest,columns) # функция для отображения таблицы, импортирована
+
+
+
     def get_age(self, message, minimum_age): # функция для обработки возраста
         while True:
             input_string = input(message) # принмает возраст

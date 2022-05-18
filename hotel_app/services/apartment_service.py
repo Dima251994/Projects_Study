@@ -34,10 +34,12 @@ class Apartment_service():
 
       name = input("Enter name for search: ")
 
-      apartments = Apartment.objects().filter(name=name) # получаем обьекты из БД и выбираем определенные по методу filter
+      apartments = Apartment.objects().filter(name=name) # получаем обьекты из БД и выбираем определенные обьекты по методу filter
       
       columns = ("Name", "Price", "Description") # колонки для названия в PrettyTable
       pretty_print(apartments,columns) # функция для отображения таблицы, импортирована
+
+      return apartments
       
 
 
