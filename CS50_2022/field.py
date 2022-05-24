@@ -19,9 +19,18 @@
 #print(vars(mongoengine.IntField()))
 
 
-x = 10
+# while True:
+#     n = int(input("Enter number "))
+#     if n > 0: # сначала заканчиваем тут цикл если n больше нуля
+#         break
 
-if x == 10:
-    print("Ten")
-if x >1:
-    print("greater")
+# for _ in range(n): # и если n больше 0 тогда переходим сюда и делаем этот цикл
+#     print("Hello")
+
+from random import randint
+data_series = [(randint(0,9999), randint(0,9999)) for i in range(5)] # создание рандомных чисел
+print(data_series)
+for point in data_series:
+    print(point[0], point[1])
+
+

@@ -1,0 +1,45 @@
+from PySide2.QtWidgets import *
+from PySide2.QtCore import Slot, Qt
+
+
+
+@Slot()
+def on_slider(value):
+    print("Value is: ", value)
+    label.setText(f"Value is {value}")
+
+def on_click():
+    print("New click")
+
+
+app = QApplication([])
+window = QWidget()
+main_layout = QVBoxLayout()
+window.setLayout(main_layout)
+
+label = QLabel("Just label text")
+button_1 = QPushButton("Button 1")
+button_1.clicked.connect(on_click)
+button_2 = QPushButton("Button 2")
+
+bonus_layout = QHBoxLayout() # добавление еще одной схемы
+bonus_layout.addWidget(QPushButton("Helloooooooo")) # добавление кнопки к бонусной схеме
+
+
+slider = QSlider(Qt.Horizontal)
+slider.valueChanged[int].connect(on_slider)
+
+
+
+
+main_layout.addWidget(label)
+
+main_layout.addLayout(bonus_layout) # добавление бонусной схемы в главную
+
+main_layout.addWidget(button_1)
+main_layout.addWidget(button_2)
+main_layout.addWidget(slider)
+
+
+window.show()
+app.exec_()
