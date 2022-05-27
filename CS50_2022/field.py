@@ -27,10 +27,17 @@
 # for _ in range(n): # и если n больше 0 тогда переходим сюда и делаем этот цикл
 #     print("Hello")
 
-from random import randint
-data_series = [(randint(0,9999), randint(0,9999)) for i in range(5)] # создание рандомных чисел
-print(data_series)
-for point in data_series:
-    print(point[0], point[1])
+# while True:
+#     try:
+#         x = int(input("Enter number: "))
+#     except ValueError:
+#         print("Enter number not letter")
+#     else: # это происходит если выполниться try
+#         break
+# print("x is", x)
+
+
+
+
 
 
