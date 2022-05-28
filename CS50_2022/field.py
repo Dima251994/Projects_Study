@@ -38,6 +38,12 @@
 
 
 
+# import sys
 
 
+# for arg in sys.argv[1:]: 
+#     print("Hello my name:", arg)
 
+
+some_list = ["Hello", "My", "Darlling", "Amazing", "Stuff"]
+print(some_list[0:-1]) # отображаем все елементы кроме последнего, если мы не значем сколько елементов в списке

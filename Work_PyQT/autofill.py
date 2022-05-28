@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import *
+from PySide2.QtWidgets import * 
 from PySide2.QtCore import Qt, QSize # для манипуляции с виджетами, Qt - нужен для параметров различных
 from PySide2 import QtGui
 

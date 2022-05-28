@@ -27,6 +27,7 @@ def main():
             s.case("b", booking_service.search_booking_by_name) # функция для поиска по имени
             s.case("m", booking_service.booking_add) # фукния для добавления брониравния
             s.case("sg", guest_service.search_guest)
+            s.case("bbb", booking_service.booking_list)
             s.case("?", show_menu)
             s.case("e", exit)
             s.default(lambda:print("Enter valid command"))
@@ -44,6 +45,7 @@ def show_menu():
     print("[G] Add guest")
     print("[B] Booking info")
     print("[M] Make booking")  # бронировать номер
+    print("[BBB] Booking list")
     print("[?] Help")
     print("[E] Exit")
 

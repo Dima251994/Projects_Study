@@ -52,3 +52,17 @@ class Booking_service():
 
 
         
+    def booking_list(self):
+        apartments = Apartment.objects() # подгружем обьекты для работы из базы
+        bookings = []
+        for apartment in apartments: # выбираем обьекты все из apartment
+            for booking in apartment.booking: # далее заходим в каждый обьект в подпункт booking
+                booktmp = {
+                  "check_in_date": booking["check_in_date"], # сохраняем кажде значени в словарь
+                  "check_out_date": booking["check_out_date"],
+                  "apartment_name": apartment["name"]   
+                }
+            #print(f"Name apartment: {apartment.name}, price apartment: {apartment.price}")
+                bookings.append(booktmp)
+        return bookings
+        #print(bookings)
