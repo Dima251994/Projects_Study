@@ -1,0 +1,4 @@
+
+mail@.com
+@some_namemail@mail.com
+some_namemail@@@@mail.com

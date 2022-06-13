@@ -44,4 +44,36 @@
 # for arg in sys.argv[1:]: 
 #     print("Hello my name:", arg)
 
+# name = input("Enter name: ")
+
+# with open("names.txt", "a") as file:
+#      file.write(f"{name}\n")
+
+
+# import sys # для доступу до командної строки аргументів
+
+# from PIL import Image # імпорт бібліотеки
+
+# load_image_file = ["11.png", "22.png"]
+# images = [] # для збирання всіх картинок з командної строки
+
+# for arg in load_image_file: # проходиться по всіх аргументах в в терміналі де ми вказали назви картинок, окрім назви файли, відлік йде з першого елементу щоб не попала назва файлу, яка йде першою в коді терміналу
+#     image = Image.open(arg) # кожну картинку відкриває в PIL файл
+#     images.append(image) # додаємо в список
+
+
+# images[0].save( # зберігаємо картинку нову у вигляді гіфки, стартова нульова зі списку
+#     "costumes.gif", save_all=True, append_images=[images[1]], duration=200, loop=0 # перше це назва, друге все зберегти, третє які картинки додати до гіфки, duration - тривалість, loop - безкінечно
+# )
+
+
+import re
+check_email = "@dd"
+email = "   some_namemail@.com     "
+
+if re.search(".+@.*\.com", email): # тут вказує що ми хочемо знайти, а другий аргумент в чому шукаємо
+    print("Valid")
+else:
+    print("Invalid")
+    
 

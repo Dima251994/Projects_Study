@@ -1,6 +1,6 @@
 # -*- coding: cp1251 -*-
 
-from PySide2.QtWidgets import *
+from PySide2.QtWidgets import * 
 from PySide2.QtCore import Slot
 from views.landing_window import LandingWindow # импорт подокна из папки
 
