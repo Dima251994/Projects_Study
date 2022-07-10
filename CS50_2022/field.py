@@ -67,13 +67,37 @@
 # )
 
 
-import re
-check_email = "@dd"
-email = "   some_namemail@.com     "
 
-if re.search(".+@.*\.com", email): # тут вказує що ми хочемо знайти, а другий аргумент в чому шукаємо
-    print("Valid")
-else:
-    print("Invalid")
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# import re
+# check_email = "@dd"
+# email = "some_namemail@@@@@.com"
+
+# if re.search(".+@.*\.com", email): # тут вказує що ми хочемо знайти, а другий аргумент в чому шукаємо
+#     print("Valid")
+# else:
+#     print("Invalid")
     
+L = [1, 2, 4, 8, 16, 32, 64]
+# X = 5
+# found = False
+# i = 0
+# while not found and i < len(L) :
+#     if 2 ** X == L[i] :
+#         found = True
+#     else:
+#         i = i + 1
+# if found:
+#     print("at index", i)
+# else:
+#     print(X, "not found")
 
+
+
+def multiple(number):
+    return number * 2
+
+list_ = [2,3,4]
+new_list = list(map(multiple, list_))
+print(new_list)

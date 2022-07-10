@@ -7,7 +7,7 @@ class Commands:
     def add_friend(self):
         """ Add new friend to database """
         while True:
-            try:
+            try: # For check correct enter
                 first_name = input("Enter first name: ")
                 last_name = input("Enter last name: ")
                 salary = float(input("Enter salary: "))
@@ -20,15 +20,13 @@ class Commands:
                 another_friend= input("Add another friend? \n[Y] Yes, [N] No: ").upper()
                 if another_friend == "Y":
                     exit()
-            except:
+            except: # If some error, ask end loop or continue to try
                 print("Enter valid values")
                 another_friend= input("Try again? \n[Y] Yes, [N] No: ").upper()
             if another_friend == "N":
                 exit()   
 
 
-
-        
     def show_info_from_table(self):
         """ Show info about friends in table """
 
