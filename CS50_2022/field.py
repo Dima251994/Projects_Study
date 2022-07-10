@@ -79,7 +79,7 @@
 # else:
 #     print("Invalid")
     
-L = [1, 2, 4, 8, 16, 32, 64]
+# L = [1, 2, 4, 8, 16, 32, 64]
 # X = 5
 # found = False
 # i = 0
@@ -93,11 +93,4 @@ L = [1, 2, 4, 8, 16, 32, 64]
 # else:
 #     print(X, "not found")
 
-
-
-def multiple(number):
-    return number * 2
-
-list_ = [2,3,4]
-new_list = list(map(multiple, list_))
-print(new_list)
+#Info for new branch
