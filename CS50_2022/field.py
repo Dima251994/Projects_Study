@@ -100,4 +100,4 @@ def test_func():
 
 
 def test_func_from_branch():
-    return 2*566666676767676767677
+    return 2*4444444
