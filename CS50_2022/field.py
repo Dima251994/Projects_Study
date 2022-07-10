@@ -94,3 +94,6 @@
 #     print(X, "not found")
 
 #CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+def test_func_from_branch():
+    return 2*3
