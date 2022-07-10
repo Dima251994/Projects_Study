@@ -98,4 +98,4 @@
 def test_func():
     return 2 + 2
 def test_func_from_branch():
-    return 2*3
+    return 2*4444444
