@@ -94,3 +94,6 @@
 #     print(X, "not found")
 
 #CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+def test_func():
+    return 2 + 2
