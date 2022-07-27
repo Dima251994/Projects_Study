@@ -95,9 +95,31 @@
 
 #CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
-def test_func():
-    return 2 + 2
+
+# from PyQt5.QtWidgets import QApplication, QWidget
+# from PyQt5.QtGui import QIcon # дадаємо для іконки імпорт
+
+# class Window(QWidget): # створення класу для роботи з вікном
+#     def __init__(self): # унаслідування все з QWidget
+#         super().__init__()
+
+#         self.setWindowTitle("My program") # встановлення назви вікна
+#         self.setWindowIcon(QIcon("IconCalc.png")) # додавання іконки в программу
+#         #self.setFixedSize(300,400) # розмір екрану, ширина і висота відповідно
+#         self.setGeometry(100,300,300,300) # перші два параметра це стартова позиція по осі х і у, а два інші це розміри вікна при запуску
+#         #self.setStyleSheet("background-color:red") # встановка кольору заднього фону
+#         stylesheet = ( # створюємо окремо стиль і додаємо його внизу в наші стилі
+#             "background-color:red"
+#         )
+#         self.setStyleSheet(stylesheet) # ось тут додаємо
+#         print(vars(QWidget))
 
 
-def test_func_from_branch():
-    return 2*4444444
+
+# app = QApplication([])
+# window = Window() # тепер ця змінна  відноситься до классу Window
+# window.show() # бере всі методи які можливо 
+# app.exec_()
+
+from hello import main
+main()

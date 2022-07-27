@@ -1,4 +1,4 @@
-from PySide2.QtCore import Qt # импорт для работы с командами различными чтобы менять интерфейс
+from PySide2.QtCore import Qt # импорт для работы с командами различными чтобы менять интерфейс 
 from PySide2.QtWidgets import *
 from PySide2 import QtGui
 
