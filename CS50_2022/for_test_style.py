@@ -6,7 +6,7 @@ class UI(QWidget):
     def __init__(self):
         super().__init__()
 
-        uic.loadUi("MyTest.ui", self) # грузимо наш ui файл, self потрібен щоб ми могли працювати з QWidget який унаслідуємо
+        uic.loadUi("button_style.ui", self) # грузимо наш ui файл, self потрібен щоб ми могли працювати з QWidget який унаслідуємо
 
 
 app = QApplication([])
