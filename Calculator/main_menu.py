@@ -13,7 +13,6 @@ class Window(QWidget):
     
     def buttons(self):
         QPushButton(text="Click me", parent=self)
-
         
 
 app = QApplication([])
